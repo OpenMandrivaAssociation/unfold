@@ -1,6 +1,6 @@
 Name:		unfold
 Version:	1.0.3
-Release:	1
+Release:	2
 Summary:	Archive manager for Linux desktops
 License:        GPL-3+
 URL:            https://github.com/xapp-project/unfold
@@ -12,16 +12,16 @@ BuildSystem:    meson
 
 BuildRequires:	desktop-file-utils
 BuildRequires:  gettext
-BuildRequires:	lib64glib2.0-devel
-BuildRequires:	lib64gio-gir2.0
-BuildRequires:	lib64gtk3_0
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	typelib(Gio)
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:  meson
 BuildRequires:  pkgconfig
 BuildRequires:  python
 
 Requires:	7zip
-Requires:       lib64gtk-gir3.0
-Requires:       lib64xapp-gir3.2
+Requires:       typelib(Gtk)
+Requires:       typelib(XApp)
 Requires:       python
 Requires:       python-gi
 Requires:       python-setproctitle
