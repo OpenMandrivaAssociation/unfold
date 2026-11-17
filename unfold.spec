@@ -1,6 +1,6 @@
 Name:		unfold
-Version:	1.0.3
-Release:	2
+Version:	1.0.4
+Release:	1
 Summary:	Archive manager for Linux desktops
 License:        GPL-3+
 URL:            https://github.com/xapp-project/unfold
@@ -34,7 +34,15 @@ Archive manager for Linux desktops
 %prep
 %autosetup -p1
 
-%files
+%build
+%meson_build
+ 
+%install
+%meson_install
+
+%find_lang %{name}
+
+%files -f %{name}.lang
 %license LICENSES/*
 %doc README.md
 %{_bindir}/unfold
