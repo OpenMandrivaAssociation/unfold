@@ -1,5 +1,5 @@
 Name:		unfold
-Version:	1.0.4
+Version:	1.0.5
 Release:	1
 Summary:	Archive manager for Linux desktops
 License:        GPL-3+
